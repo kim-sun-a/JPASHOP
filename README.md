@@ -8,6 +8,7 @@
 - Gradle 7.6
 - h2
 - thymeleaf
+- Bootstrap4
 - lombok
 
 
