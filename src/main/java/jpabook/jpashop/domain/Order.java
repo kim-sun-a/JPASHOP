@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Table(name = "orders")
 @Getter @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)          // 생성자 메서드가 있기 때문에 새로운 생성자 메서드 만드는 것을 방지
 public class Order {
     @Id @GeneratedValue
     @Column(name = "order_id")
