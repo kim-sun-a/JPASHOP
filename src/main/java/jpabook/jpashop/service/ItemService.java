@@ -26,7 +26,7 @@ public class ItemService {
      */
     @Transactional
     public void updateItem(Long itemId, String name, int price, int stockQuantity) {       // bookParam : 파라미터로 넘어온 준영속 상태의 엔티티
-        Item findItem = itemRepository.findOne(itemId);         // 같은 엔티티를 조회
+        Item findItem = itemRepository.findById(itemId).get();         // 같은 엔티티를 조회
         findItem.setName(name);                                 // 데이터 수정
         findItem.setPrice(price);
         findItem.setStockQuantity(stockQuantity);
@@ -37,7 +37,7 @@ public class ItemService {
     }
 
     public Item findOne(Long id) {
-        return itemRepository.findOne(id);
+        return itemRepository.findById(id).get();
     }
 
 }
